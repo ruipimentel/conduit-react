@@ -1,22 +1,19 @@
+import { useState } from 'react';
+
 import './TagList.css';
 
 function TagList() {
-  return (
-    <>
-      <a
-        href="/"
-        className="tag-list-a"
-      >
-        tag1
-      </a>
-      <a
-        href="/"
-        className="tag-list-a"
-      >
-        tag2
-      </a>
-    </>
-  );
+  const [ tags ] = useState([]);
+
+  return tags.map(tag => (
+    <a
+      key={tag}
+      href="/"
+      className="tag-list-a"
+    >
+      {tag}
+    </a>
+  ));
 }
 
 export default TagList;
