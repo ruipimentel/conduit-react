@@ -1,9 +1,35 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './TagList.css';
 
 function TagList() {
-  const [ tags ] = useState([]);
+  const [ tags, setTags ] = useState(undefined);
+
+  // Função assíncrona!
+  useEffect(() => {
+
+    // Função assíncrona!
+    fetch('https://conduit.productionready.io/api/tags').then(res => {
+
+      // Função assíncrona!
+      res.json().then(dados => {
+
+        // Função assíncrona!
+        setTags(dados.tags);
+
+      });
+
+    });
+
+  }, []);
+
+  if (!tags) {
+    return 'Carregando...';
+  }
+
+  if (tags.length === 0) {
+    return 'Não há tags';
+  }
 
   return tags.map(tag => (
     <a
