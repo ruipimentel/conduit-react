@@ -16,10 +16,10 @@ function App() {
       <Header />
       <Switch>
         <Route path="/login">
-          <Auth />
+          <Auth register={false} />
         </Route>
         <Route path="/register">
-          <Auth />
+          <Auth register={true} />
         </Route>
         <Route path="/home">
           <Home />
