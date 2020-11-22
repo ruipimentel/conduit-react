@@ -1,0 +1,15 @@
+#header-logo {
+  font-size: 1.25em;
+  color: #66bc66;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+.header-menu {
+  color: #0000004d;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+.header-float-right {
+  float: right;
+}
