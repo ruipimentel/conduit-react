@@ -23,8 +23,8 @@ function Home() {
           Um lugar para você compartilhar todo o seu conhecimento!
         </p>
       </div>
-      <div className="container">
-        <div>
+      <div className="container row sm-vertical">
+        <div className="col sm-full">
           <nav id="home-nav">
             <NavLink to={`${routeMatch.url}/my-feed`}>
               Meu feed
@@ -36,11 +36,9 @@ function Home() {
           <main>
             <Switch>
               <Route path={`${routeMatch.path}/my-feed`}>
-                My feed
                 <ArticleList />
               </Route>
               <Route path={`${routeMatch.path}/global-feed`}>
-                Global feed
                 <ArticleList />
               </Route>
               <Route path={`${routeMatch.path}/`}>
@@ -49,6 +47,14 @@ function Home() {
             </Switch>
           </main>
         </div>
+        <aside
+          className="no-flex sm-full"
+          style={{
+            "width": "260px"
+          }}
+        >
+          Tags populares
+        </aside>
       </div>
     </>
   );
