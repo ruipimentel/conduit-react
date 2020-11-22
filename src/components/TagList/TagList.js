@@ -15,7 +15,9 @@ function TagList() {
       res.json().then(dados => {
 
         // Função assíncrona!
-        setTags(dados.tags);
+        setTags(dados.tags.filter(
+          tag => tag.replace(/[^a-z0-9]/g, '')
+        ));
 
       });
 
