@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import './Header.css';
 
@@ -7,30 +7,30 @@ function Header() {
     <nav id="header-nav">
       <div className="container">
         <Link
-          to="/"
+          to="/home"
           id="header-logo"
         >
           conduit
         </Link>
         <div className="header-float-right">
-          <Link
-            to="/"
+          <NavLink
+            to="/home"
             className="header-menu"
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/login"
             className="header-menu"
           >
             Login
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/register"
             className="header-menu"
           >
             Cadastrar
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>

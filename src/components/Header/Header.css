@@ -15,6 +15,9 @@
   padding-right: 0;
   font-size: 0.9em;
 }
+.header-menu.active {
+  color: #000000cc;
+}
 .header-float-right {
   float: right;
 }

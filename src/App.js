@@ -1,6 +1,7 @@
 import {
   BrowserRouter as Router,
   Switch,
+  Redirect,
   Route
 } from 'react-router-dom';
 
@@ -20,8 +21,11 @@ function App() {
         <Route path="/register">
           <Auth />
         </Route>
-        <Route path="/">
+        <Route path="/home">
           <Home />
+        </Route>
+        <Route exact path="/">
+          <Redirect to="/home" />
         </Route>
       </Switch>
     </Router>
