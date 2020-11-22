@@ -8,6 +8,7 @@ import {
 
 import './Home.css';
 import ArticleList from '../ArticleList/ArticleList';
+import TagList from '../TagList/TagList';
 
 function Home() {
 
@@ -54,6 +55,8 @@ function Home() {
           }}
         >
           Tags populares
+          <br />
+          <TagList />
         </aside>
       </div>
     </>

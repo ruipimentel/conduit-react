@@ -1,0 +1,10 @@
+.tag-list-a {
+  display: inline-block;
+  background-color: #818a91;
+  color: white;
+  padding: .2em .8em;
+  white-space: nowrap;
+  margin-right: .3em;
+  border-radius: 1em;
+  font-size: .9em;
+}
