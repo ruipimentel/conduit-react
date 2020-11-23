@@ -40,7 +40,7 @@ function Auth({
       name="username"
       placeholder="Nome de usuário"
       type="text"
-      className="col auth-input"
+      className={`col auth-input ${erroUsername ? 'invalid' : ''}`}
     />
     <div className="auth-error">{erroUsername}</div>
   </>;
@@ -66,7 +66,7 @@ function Auth({
             name="email"
             placeholder="E-mail"
             type="text"
-            className="col auth-input"
+            className={`col auth-input ${erroEmail ? 'invalid' : ''}`}
           />
           <div className="auth-error">{erroEmail}</div>
 
@@ -79,7 +79,7 @@ function Auth({
             id="password"
             name="password"
             type="password"
-            className="col auth-input"
+            className={`col auth-input ${erroPassword ? 'invalid' : ''}`}
           />
           <div className="auth-error">{erroPassword}</div>
 

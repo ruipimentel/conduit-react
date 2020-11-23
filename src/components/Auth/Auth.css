@@ -10,6 +10,9 @@
   margin: .5em 0 0;
   font-size: 1em;
 }
+.auth-input.invalid {
+  border: 1px solid red;
+}
 .auth-error {
   color: red;
 }
