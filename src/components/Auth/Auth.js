@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './Auth.css';
 
 function Auth({
+  onSubmit,
   register
 }) {
 
@@ -12,11 +13,14 @@ function Auth({
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log({
-      username,
+    const dados = {
       email,
       password
-    });
+    };
+    if (register) {
+      dados.username = username;
+    }
+    onSubmit(dados);
   };
 
   const campoUsername = <input

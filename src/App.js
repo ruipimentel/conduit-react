@@ -11,15 +11,27 @@ import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
 
 function App() {
+  const onLoginSubmit = (dados) => {
+    console.log('Login:', dados);
+  };
+  const onRegisterSubmit = (dados) => {
+    console.log('Register:', dados);
+  };
   return (
     <Router>
       <Header />
       <Switch>
         <Route path="/login">
-          <Auth register={false} />
+          <Auth
+            onSubmit={onLoginSubmit}
+            register={false}
+          />
         </Route>
         <Route path="/register">
-          <Auth register={true} />
+          <Auth
+            onSubmit={onRegisterSubmit}
+            register={true}
+          />
         </Route>
         <Route path="/home">
           <Home />
