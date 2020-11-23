@@ -31,11 +31,12 @@ function Auth({
     name="username"
     placeholder="Nome de usuário"
     type="text"
+    className="col auth-input"
   />;
 
   return (
     <div className="container">
-      <h1>{ register ? 'Cadastrar' : 'Login' }</h1>
+      <h1 className="center">{ register ? 'Cadastrar' : 'Login' }</h1>
       <div className="auth-container">
         <form
           onSubmit={formSubmitHandler}
@@ -49,6 +50,7 @@ function Auth({
             name="email"
             placeholder="E-mail"
             type="text"
+            className="col auth-input"
           />
           <input
             value={password}
@@ -56,12 +58,16 @@ function Auth({
             id="password"
             name="password"
             type="password"
+            className="col auth-input"
           />
-          <button
-            type="submit"
-          >
-            Enviar
-          </button>
+          <div className="right">
+            <button
+              type="submit"
+              className="auth-button btn-primary"
+            >
+              Enviar
+            </button>
+          </div>
         </form>
       </div>
     </div>
