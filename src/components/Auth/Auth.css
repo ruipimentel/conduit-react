@@ -21,3 +21,8 @@
   margin: .5em 0 0;
   font-size: 1em;
 }
+.auth-button:disabled {
+  border-color: gray;
+  background-color: lightgray;
+  color: darkgray;
+}

@@ -87,6 +87,11 @@ function Auth({
             <button
               type="submit"
               className="auth-button btn-primary"
+              disabled={
+                (register && usernameValidator(username))
+                || emailValidator(email)
+                || passwordValidator(password)
+              }
             >
               Enviar
             </button>
