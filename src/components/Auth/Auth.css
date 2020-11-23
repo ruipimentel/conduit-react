@@ -10,6 +10,9 @@
   margin: .5em 0 0;
   font-size: 1em;
 }
+.auth-error {
+  color: red;
+}
 .auth-button {
   height: 3em;
   margin: .5em 0 0;
