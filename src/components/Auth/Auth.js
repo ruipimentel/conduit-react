@@ -38,7 +38,7 @@ function Auth({
         >
           { register ? campoUsername : null }
           <input
-            autoFocus
+            autoFocus={!register}
             value={email}
             onChange={event => setEmail(event.target.value)}
             id="email"
