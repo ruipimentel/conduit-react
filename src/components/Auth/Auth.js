@@ -2,7 +2,9 @@ import { useState } from 'react';
 
 import './Auth.css';
 
-function Auth(props) {
+function Auth({
+  register
+}) {
 
   const [ username, setUsername ] = useState('');
   const [ email, setEmail ] = useState('');
@@ -29,12 +31,12 @@ function Auth(props) {
 
   return (
     <div className="container">
-      <h1>{ props.register ? 'Cadastrar' : 'Login' }</h1>
+      <h1>{ register ? 'Cadastrar' : 'Login' }</h1>
       <div className="auth-container">
         <form
           onSubmit={formSubmitHandler}
         >
-          { props.register ? campoUsername : null }
+          { register ? campoUsername : null }
           <input
             autoFocus
             value={email}
